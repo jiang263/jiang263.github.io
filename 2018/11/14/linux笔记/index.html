@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>nginx笔记 | Hexo</title>
+<title>linux笔记 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -128,15 +128,58 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <article class="post">
-    <h1 class="post-head">nginx笔记</h1>
-    <div class="post-body">
-        <p>Linux系统快速入门<br>1 学习目标：<br>建立对linux的基本认识<br>掌握常用linux命令的使用<br>掌握linux中常用的配置文件<br>掌握linux中应用软件或服务的安装方法</p>
-<p>2 linux简介<br>Linux是一种自由和开放源码的操作系统<br>Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成<br>市场上存在着许多不同的Linux发行版本<br>Linux可安装在各种计算机硬件设备中，比如笔记本电脑、台式计算机、手机、平板电脑、路由器等。<br>Linux系统最擅长的领域是作服务器操作系统和嵌入式操作系统</p>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="linux笔记">
+            
+	            linux笔记
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/11/14</span>
+        </span>
+        
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>linux使用笔记,仅供参考学习</p>
+<h1 id="Linux系统快速入门"><a href="#Linux系统快速入门" class="headerlink" title="Linux系统快速入门"></a>Linux系统快速入门</h1><h2 id="1-学习目标："><a href="#1-学习目标：" class="headerlink" title="1. 学习目标："></a>1. 学习目标：</h2><p>建立对linux的基本认识<br>掌握常用linux命令的使用<br>掌握linux中常用的配置文件<br>掌握linux中应用软件或服务的安装方法</p>
+<h2 id="2-linux简介"><a href="#2-linux简介" class="headerlink" title="2. linux简介"></a>2. linux简介</h2><p>Linux是一种自由和开放源码的操作系统<br>Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成<br>市场上存在着许多不同的Linux发行版本<br>Linux可安装在各种计算机硬件设备中，比如笔记本电脑、台式计算机、手机、平板电脑、路由器等。<br>Linux系统最擅长的领域是作服务器操作系统和嵌入式操作系统</p>
 <p>发行版的选择：</p>
 <p>主流企业级服务器Linux系统是RedHat或者CentOS；<br>RedHat企业版linux 和CentOS差别不大，CentOS是基于Red Hat Linux 企业版开发的一个社区版本，可免费自由使用；而且CentOS独有的yum命令支持在线升级，可以即时更新系统，不像RedHat 那样需要花钱购买支持服务！</p>
-<p>3 linux系统安装<br>首先，到相应发行版的官网下载linux安装光盘镜像（按硬件平台选择相应版本）<br>在物理机或者虚拟机上安装linux系统<br>在物理机上安装linux系统跟安装windows系统的步骤类似<br>而在虚拟机上则支持“傻瓜式”安装，几乎全自动</p>
+<h2 id="3-linux系统安装"><a href="#3-linux系统安装" class="headerlink" title="3. linux系统安装"></a>3. linux系统安装</h2><p>首先，到相应发行版的官网下载linux安装光盘镜像（按硬件平台选择相应版本）<br>在物理机或者虚拟机上安装linux系统<br>在物理机上安装linux系统跟安装windows系统的步骤类似<br>而在虚拟机上则支持“傻瓜式”安装，几乎全自动</p>
 <p>虚拟机：用软件模拟出来的虚拟计算机<br>虚拟机软件：用来创建和运行虚拟计算机的一个软件，比如Vmware或VirtualBox</p>
 <p>在虚拟机上的安装步骤：<br>1、启动Vmware<br>2、点击创建虚拟机</p>
 <p>3、选择典型配置</p>
@@ -146,7 +189,7 @@
 <p>7、设置分配给虚拟机的最大磁盘空间</p>
 <p>8、点击finish完成虚拟机创建并启动</p>
 <p>9、虚拟机启动并自动进入linux操作系统自动安装流程</p>
-<p>4 linux系统的远程登陆<br>服务器通常都是放置在专用的机房中管理，因而，直接在服务器上操作很不方便，生产实践中都是通过远程登录的方式来操作服务器</p>
+<h2 id="4-linux系统的远程登陆"><a href="#4-linux系统的远程登陆" class="headerlink" title="4. linux系统的远程登陆"></a>4. linux系统的远程登陆</h2><p>服务器通常都是放置在专用的机房中管理，因而，直接在服务器上操作很不方便，生产实践中都是通过远程登录的方式来操作服务器</p>
 <p>远程登录linux服务器需要客户端软件<br>常用的远程登录客户端软件有以下3款：<br>SecureCRT  —推荐使用<br>Xshell<br>Putty<br>这些软件都是基于一种通用的安全通信协议进行远程登录：SSH协议（安全外壳协议）<br>SSH协议要求对远程登录者进行身份验证，并有两种认证方式：<br>口令机制——即 “用户名+密码”验证机制&lt;默认机制&gt;<br>密钥机制&lt;需要配置才能生效&gt;</p>
 <p>如何远程登录linux服务器：<br>1、获知目标linux服务器的ip地址<br>2、客户端跟目标服务器两者能联网<br>3、需要一款支持SSH协议的客户端软件<br>4、服务器必须开启SSH服务<br>5、启动SSH客户端软件，填写目标服务器地址信息，如使用SecureCRT：</p>
 <p>6、输入用户/密码进行登录</p>
@@ -221,8 +264,8 @@
 <p>8.5 常用工具指令<br>8.5.1  vi 编辑器<br>linux系统中最通用的文本编辑器<br>vi hello.world 进入文件编辑<br>进去之后处于非编辑模式，此时，要按一个i进入insert模式</p>
 <p>在insert模式下，可以跟普通文本编辑器一样编辑内容<br>编辑完成之后，先按Esc退出insert模式，进入非编辑模式<br>然后再按 ：进入底行命令模式，在底行命令中敲入wq并回车，即可保存<br>如果想不保存退出，底行命令就用 q! </p>
 <p>（保存文件的另一种模式： 编辑完后按Esc退出insert模式，然后直接按快捷键保存—— shift + zz）</p>
-<p>8.5.2 修改系统的默认启动级别<br>vi /etc/inittab</p>
-<h1 id="0-halt-Do-NOT-set-initdefault-to-this"><a href="#0-halt-Do-NOT-set-initdefault-to-this" class="headerlink" title="0 - halt (Do NOT set initdefault to this)"></a>0 - halt (Do NOT set initdefault to this)</h1><h1 id="1-Single-user-mode"><a href="#1-Single-user-mode" class="headerlink" title="1 - Single user mode"></a>1 - Single user mode</h1><h1 id="2-Multiuser-without-NFS-The-same-as-3-if-you-do-not-have-networking"><a href="#2-Multiuser-without-NFS-The-same-as-3-if-you-do-not-have-networking" class="headerlink" title="2 - Multiuser, without NFS (The same as 3, if you do not have networking)"></a>2 - Multiuser, without NFS (The same as 3, if you do not have networking)</h1><h1 id="3-Full-multiuser-mode"><a href="#3-Full-multiuser-mode" class="headerlink" title="3 - Full multiuser mode"></a>3 - Full multiuser mode</h1><h1 id="4-unused"><a href="#4-unused" class="headerlink" title="4 - unused"></a>4 - unused</h1><h1 id="5-X11"><a href="#5-X11" class="headerlink" title="5 - X11"></a>5 - X11</h1><h1 id="6-reboot-Do-NOT-set-initdefault-to-this"><a href="#6-reboot-Do-NOT-set-initdefault-to-this" class="headerlink" title="6 - reboot (Do NOT set initdefault to this)"></a>6 - reboot (Do NOT set initdefault to this)</h1><p>#<br>id:3:initdefault:<br>~<br>用level 3 就启动全功能状态的字符界面 </p>
+<p>8.5.2 修改系统的默认启动级别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/inittab</span><br><span class="line"></span><br><span class="line">#   0 - halt (Do NOT set initdefault to this)</span><br><span class="line">#   1 - Single user mode</span><br><span class="line">#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)</span><br><span class="line">#   3 - Full multiuser mode</span><br><span class="line">#   4 - unused</span><br><span class="line">#   5 - X11</span><br><span class="line">#   6 - reboot (Do NOT set initdefault to this)</span><br><span class="line">#</span><br><span class="line">id:3:initdefault:</span><br><span class="line">~</span><br></pre></td></tr></table></figure></p>
+<p>用level 3 就启动全功能状态的字符界面 </p>
 <p>在命令行模式下，用startx可以手动启动图形界面(在服务器上操作)</p>
 <p>8.5.3 其他指令<br>1、grep<br>grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本内容，并把匹配的行打印出来</p>
 <p>示例：<br>grep ‘EOF’ ./<em><br>grep -c‘EOF’  ./</em>  显示匹配到的行数<br>grep -r ‘EOF’  ./<em>  指定对子目录也进行搜索<br>grep -l ‘EOF’ ./</em>   只显示命中的文件名<br>grep -n ‘EOF’ ./<em>  显示命中的行号<br>grep -lr ‘EOF’ ./</em><br>grep -ld skip ‘EOF’ ./*  显示指定不要搜索子文件夹</p>
@@ -240,96 +283,87 @@
 <p>9.3 yum在线安装软件<br>yum 可以通过线上软件仓库自动解决依赖并安装指定的软件包(RPM)，示例如下：<br>yum install tomcat<br>yum –list tomcat*<br>yum install tomcat6<br>yum install tomcat6-webapps.i686</p>
 
     </div>
+    
+        <div class="reward">
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="../img/reward-wepay.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">赞赏是不耍流氓的鼓励</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
 </article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/11/14/测试/" class="next-post btn btn-default" title="测试">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">测试</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
                 </main>
                 
-                    
-    <aside class="col-md-4 sidebar">
-        
-        
+                    <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">Search</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="Search What？">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux系统快速入门"><span class="toc-text">Linux系统快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-学习目标："><span class="toc-text">1. 学习目标：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-linux简介"><span class="toc-text">2. linux简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-linux系统安装"><span class="toc-text">3. linux系统安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-linux系统的远程登陆"><span class="toc-text">4. linux系统的远程登陆</span></a></li></ol></li></ol>
+        
     </div>
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Notification</h3>
-        <div class="notification">
-            <p>
-    博客作者：<span style="color:#e67e22">小灬姜</span> <br>
-    作者邮箱：<span style="color:#e67e22">2635673264@qq3com</span> <br>
-    支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">Social</h3> 
-        <div class="content social">
-            
-	            <a href="https://github.com/jiang263" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
-			    </a>
-            
-	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="微信" target="_blank">
-			    	<i class="weixin fa fa-weixin"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/"><i class="fa" aria-hidden="true">2018年11月</i></a><span class="archive-list-count">3</span></li></ul>
-    </div>
-
-
-        
-    </aside>
+</aside>
 
                 
             </div>
@@ -372,8 +406,6 @@
     </div>
 </div>
 
-
-	<script src="/js/search.js?rev=@@hash"></script>
 
 
 
