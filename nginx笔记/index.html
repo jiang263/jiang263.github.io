@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>nginx笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Linux系统快速入门1 学习目标：建立对linux的基本认识掌握常用linux命令的使用掌握linux中常用的配置文件掌握linux中应用软件或服务的安装方法 2 linux简介Linux是一种自由和开放源码的操作系统Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成市场上存在着许多不同的Linux发行版本Linux可安装在各种计算">
+<meta property="og:type" content="website">
+<meta property="og:title" content="nginx笔记">
+<meta property="og:url" content="http://yoursite.com/nginx笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux系统快速入门1 学习目标：建立对linux的基本认识掌握常用linux命令的使用掌握linux中常用的配置文件掌握linux中应用软件或服务的安装方法 2 linux简介Linux是一种自由和开放源码的操作系统Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成市场上存在着许多不同的Linux发行版本Linux可安装在各种计算">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-14T10:24:28.775Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nginx笔记">
+<meta name="twitter:description" content="Linux系统快速入门1 学习目标：建立对linux的基本认识掌握常用linux命令的使用掌握linux中常用的配置文件掌握linux中应用软件或服务的安装方法 2 linux简介Linux是一种自由和开放源码的操作系统Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成市场上存在着许多不同的Linux发行版本Linux可安装在各种计算">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/nginx笔记/index.html" class="article-date">
+  <time datetime="2018-11-14T10:24:06.000Z" itemprop="datePublished">2018-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      nginx笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Linux系统快速入门<br>1 学习目标：<br>建立对linux的基本认识<br>掌握常用linux命令的使用<br>掌握linux中常用的配置文件<br>掌握linux中应用软件或服务的安装方法</p>
+<p>2 linux简介<br>Linux是一种自由和开放源码的操作系统<br>Linux出现于1991年，是由芬兰赫尔辛基大学学生Linus Torvalds和后来加入的众多爱好者共同开发完成<br>市场上存在着许多不同的Linux发行版本<br>Linux可安装在各种计算机硬件设备中，比如笔记本电脑、台式计算机、手机、平板电脑、路由器等。<br>Linux系统最擅长的领域是作服务器操作系统和嵌入式操作系统</p>
+<p>发行版的选择：</p>
+<p>主流企业级服务器Linux系统是RedHat或者CentOS；<br>RedHat企业版linux 和CentOS差别不大，CentOS是基于Red Hat Linux 企业版开发的一个社区版本，可免费自由使用；而且CentOS独有的yum命令支持在线升级，可以即时更新系统，不像RedHat 那样需要花钱购买支持服务！</p>
+<p>3 linux系统安装<br>首先，到相应发行版的官网下载linux安装光盘镜像（按硬件平台选择相应版本）<br>在物理机或者虚拟机上安装linux系统<br>在物理机上安装linux系统跟安装windows系统的步骤类似<br>而在虚拟机上则支持“傻瓜式”安装，几乎全自动</p>
+<p>虚拟机：用软件模拟出来的虚拟计算机<br>虚拟机软件：用来创建和运行虚拟计算机的一个软件，比如Vmware或VirtualBox</p>
+<p>在虚拟机上的安装步骤：<br>1、启动Vmware<br>2、点击创建虚拟机</p>
+<p>3、选择典型配置</p>
+<p>4、选择linux操作系统“安装光盘”的镜像文件</p>
+<p>5、为即将安装的linux系统预设一个用户和登陆密码</p>
+<p>6、为新创建的这台虚拟机设置名称及数据存放路径</p>
+<p>7、设置分配给虚拟机的最大磁盘空间</p>
+<p>8、点击finish完成虚拟机创建并启动</p>
+<p>9、虚拟机启动并自动进入linux操作系统自动安装流程</p>
+<p>4 linux系统的远程登陆<br>服务器通常都是放置在专用的机房中管理，因而，直接在服务器上操作很不方便，生产实践中都是通过远程登录的方式来操作服务器</p>
+<p>远程登录linux服务器需要客户端软件<br>常用的远程登录客户端软件有以下3款：<br>SecureCRT  —推荐使用<br>Xshell<br>Putty<br>这些软件都是基于一种通用的安全通信协议进行远程登录：SSH协议（安全外壳协议）<br>SSH协议要求对远程登录者进行身份验证，并有两种认证方式：<br>口令机制——即 “用户名+密码”验证机制&lt;默认机制&gt;<br>密钥机制&lt;需要配置才能生效&gt;</p>
+<p>如何远程登录linux服务器：<br>1、获知目标linux服务器的ip地址<br>2、客户端跟目标服务器两者能联网<br>3、需要一款支持SSH协议的客户端软件<br>4、服务器必须开启SSH服务<br>5、启动SSH客户端软件，填写目标服务器地址信息，如使用SecureCRT：</p>
+<p>6、输入用户/密码进行登录</p>
+<p>登录之后的提示符：</p>
+<p>其中，<br>itcast是当前登陆者的用户名<br>localhost是本服务器的主机名<br>~ 是表示登陆者所处的当前工作目录为用户的主目录/home/itcast</p>
+<p>5 linux文件系统常用管理操作命令</p>
+<p>Linux系统文件系统目录结构：</p>
+<p>约定俗成：<br>  bin  (binaries)存放二进制可执行文件<br>  sbin  (super user binaries)存放二进制可执行文件，只有root才能访问<br>  etc (etcetera)存放系统配置文件<br>  usr  (unix shared resources)用于存放共享的系统资源<br>  home 存放用户文件的根目录<br>  root  超级用户目录<br>  dev (devices)用于存放设备文件<br>  lib  (library)存放跟文件系统中的程序运行所需要的共享库及内核模块<br>  mnt  (mount)系统管理员安装临时文件系统的安装点<br>  boot 存放用于系统引导时使用的各种文件<br>  tmp  (temporary)用于存放各种临时文件<br>  var  (variable)用于存放运行时需要改变数据的文件<br>5.1 基本命令<br>tips:输入命令的时候多用tab键来补全，一方面可以加快速度，另一方面减少错误</p>
+<p>1、文件夹操作<br>ls  /path/  查看目录信息<br>ls  -l  /path/  查看详细信息，等价于  ll<br>ls –a /path/ 查看隐藏文件</p>
+<p>路径的表示方法有“相对路径”和“绝对路径”，比如，如果当前所处目录为 /home/itcast<br>，要查看/home目录下的信息，可以有两种方法：<br>ls  ../<br>ls  /home</p>
+<p>pwd     查看当前所处目录的绝对路径<br>cd  /path   切换目录 (cd /) ,如果不带参数则切换到用户主目录 ~</p>
+<p>mkdir  ./test 创建文件夹<br>mkdir -p a/b/c  如果要创建的文件夹的父目录不存在，则自动创建</p>
+<p>rmdir   删除空文件夹  (只能删除空文件夹)<br>rm -r  /a/b  (删除非空文件夹)<br>删除文件<br>rm filename  (rm -r  删除文件夹     rm -rf 强制删除文件或文件夹)</p>
+<p>2、创建文件<br>常见的3种方式：<br>touch a.avi 创建一个空文件<br>echo “itcast is the greatest IT School” &gt; itcast.txt把“&gt;”左边的输出放到右边的文件里去<br>vi  blabla.txt 用文本编辑器编辑一个文件并且保存</p>
+<p>3、移动文件、修改文件名<br>mv a/wenjian1.txt b/file1.txt   (移动文件的同时还修改了文件名)</p>
+<p>4、拷贝文件<br>cp  srcFile  destFile</p>
+<p>5、查看文本文件内容<br>cat  log.a.txt  一次性显示整个文件内容<br>more  log.a.txt 可以分页看（翻页：空格,往回翻：b ，退出： q或者 Ctrl+C）<br>less  log.a.txt 不仅可以分页，还可以方便地搜索，回翻等操作（翻页：空格,往回翻：↑,往下翻:↓,退出：q或者 Ctrl+C）</p>
+<p>tail -10 log.a.txt   查看文件的尾部的10行<br>tail -f user.log   实时刷新显示文件的尾部，这条命令对于观察调试程序的运行非常重要</p>
+<p>head -20 log.a.txt 查看文件的头部20行</p>
+<p>6、上传和下载<br>rz上传<br>$ rz -ary –o-sync<br>man rz 可以看到帮助<br>-a 表示使用ascii码格式传输文件，如果是Dos格式的文件，会转换为unix格式<br>-r 使用 Crash recovery mode. 即文件传输中断会重传<br>-y 表示文件已存在的时候会覆盖<br>–o-sync 采用同步写模式，以处理从缓存写到磁盘时中断丢失的情况</p>
+<p>主要是采用 -r 和 –o-sync 对异常处理会有所加强，其他选项只是辅助。</p>
+<p>sz下载</p>
+<p>5.2 文件归档压缩(1：打包–归档； 2：压缩)<br>1、打包/解包<br>tar -cvf testdir.tar testdir/<br>参数c :表示创建一个打包文档<br>v：显示打包的进度<br>f：表示要打成的tar包的名字</p>
+<p>tar –xvf testdir.tar<br>参数x：表示从一个现存的tar文件中进行解包操作</p>
+<p>2、压缩/解压<br>gzip testdir.tar<br>gzip –d testdir.tar.gz</p>
+<p>3、归档并压缩/解压<br>tar -czvf  testdir.tar.gz testdir/<br>tar -xzvf testdir.tar.gz  解压到当前目录下<br>tar -xzvf testdir.tar.gz -C Downloads/   解压到指定的Downloads目录下</p>
+<p>zip test.txt.zip test.txt<br>unzip test.txt.zip</p>
+<p>5.3 文件权限管理<br>1、linux系统中对文件权限的描述机制：<br>d      r w x    r w x      r - x<br>类型  拥有者  所属组    其他人<br>权限信息可以表示为3组二进制符号：  111 111 101<br>进而可以表示为3个十进制数： 7   7   5</p>
+<p>2、修改权限<br>chmod  u+rwx file   为file添加或取消所属用户的权限<br>(u代表所属用户  o代表其他用户  g代表所属组的成员用户)<br>chmod 567 file 用数字也可以表示权限<br>5 —&gt;  101 —&gt; r-x<br>6 —&gt;  110 —&gt; rw-<br>7 —&gt;  111 —&gt; rwx</p>
+<p>3、通过实例理解rwx三种权限的含义<br>r  对文件：是否可以读取文件的内容   cat<br>   对文件夹：是否可以列出文件夹内的子节点信息   ls<br>w  对文件：是否可以修改文件的内容  &gt;&gt;   vi<br>    对文件夹：是否可以更改文件夹的子节点<br>x   对文件：是否可当做一个命令或者程序来执行<br>    对文件夹：是否可cd进入</p>
+<p>4、修改文件的所有者owner<br>只能由root权限才能操作<br>chown root:root  file 将file的所有者改成hadoop用户，所属组改成hadoop组</p>
+<p>6 用户管理</p>
+<p>Linux用户分类：<br>超级用户：（root，UID=0）<br>普通用户：（UID在500到60000）<br>伪用户：（UID在1到499）<br>系统和服务相关的：bin、daemon、shutdown等<br>进程相关的：mail、news、games等<br>伪用户不能登陆系统，而且没有宿主目录</p>
+<p>6.1 添加用户<br>基本示例：<br>useradd  itcast0830<br>必须设置密码才能正常登陆    passwd itcast0830</p>
+<p>参数手册：<br>-u 指定组ID（uid）<br>-g 指定所属的组名（gid）<br>-G 指定多个组，用逗号“，”分开（Groups）<br>-c 用户描述（comment）<br>-e 失效时间（expire date）<br>6.2 删除用户<br>userdel yun12   —-这样删除的时候，用户的主目录会被保留<br>userdel -r itcast —–删除用户的同时删除用户的主目录</p>
+<p>6.3 修改用户属性<br>指令：usermod<br>参数：<br>-l 修改用户名 （login）usermod -l a b（b改为a）<br>-g 添加组 usermod -g sys tom<br>-d 修改用户的宿主目录<br>-G添加多个组 usermod -G sys,root tom<br>-L 锁定用户账号密码（Lock）<br>-U 解锁用户账号（Unlock）</p>
+<p>示例：<br>usermod -l itcast itcast0508  将itcast0508的登陆名改为itcast<br>usermod -g root itcast 将itcast的组改为root组<br>usermod -G hadoop,hellogrp itcast 给itcast添加两个组hadoop,root<br>usermod -d /home/itcast itcast将itcast0830的主目录改成/home/itcast<br>（要事先创建itcast目录，并且拷入环境变量文件）</p>
+<p>6.4 用户组管理<br>用户组相关属性：<br>每个用户至少属于一个用户组<br>（创建新用户时如果不指定所属组，则会自动创建并归属到一个跟用户名同名的组）<br>每个用户组可以包含多个用户<br>同一个用户组的用户享有该组共有的权限</p>
+<p>用户组管理操作命令：<br>1、创建用户组<br>groupadd  java</p>
+<p>2、删除用户组<br>groupdel  bigdata</p>
+<p>3、修改用户组属性<br>groupmod –n newname grpname</p>
+<p>4、查看用所属的组<br>groups itcast</p>
+<p>6.5 用户及用户组相关配置文件<br>1、用户配置信息存放位置：<br>保存用户信息的文件：/etc/passwd<br>保存密码的文件：/etc/shadow</p>
+<p>passwd文件示例：<br>itcast:x:500:500:itcast:/home/itcast:/bin/bash<br>passwd文件各字段含义：<br>account:password:UID:GID:GECOS:directory:shell</p>
+<p>shadow文件示例：<br>itcast:$1$vRug41$UUxYzdP0i6s6wtUPieGDQ/:18617:0:99999:7:::<br>shadow文件各字段含义：<br>用户名    登陆系统的用户名<br>密码    加密密码<br>最后一次修改时间    用户最后一次修改密码距现在的天数，从1970-1-1起<br>最小时间间隔    两次修改密码之间的最小天数<br>最大时间间隔    密码有效天数<br>警告时间    从系统警告到密码失效的天数<br>账号闲置时间    账号闲置时间<br>失效时间    密码失效的天数<br>标志    标志</p>
+<p>2、用户组配置信息存放位置：<br>保存用户组的文件：/etc/group<br>保存用户组密码的文件：/etc/gshadow（设置组管理员时才有用）</p>
+<p>7 网络配置管理<br>7.1 网卡地址配置<br>检查网络连通性:<br>ping  destip</p>
+<p>查看ip地址<br>ifconfig   查看所有网络设备的地址信息<br>ifconfig  eth0   查看指定的eth0以太网卡的地址信息</p>
+<p>修改ip地址<br>ifconfig  eth0  192.168.2.150  netmask  255.255.255.0</p>
+<p>通过setup修改网络配置<br>在root权限下执行setup指令可以打开一个带菜单的伪图形界面来修改网络配置</p>
+<p>通过配置文件修改ip地址<br>vi /etc/sysconfig/network-scripts/ifcfg-eth0 修改该配置文件即可改ip地址<br>[root@localhost ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0<br>DEVICE=eth0<br>BOOTPROTO=none<br>HWADDR=00:0c:29:f1:b2:e8   #网卡物理地址<br>IPV6INIT=yes<br>NM_CONTROLLED=yes<br>ONBOOT=yes<br>TYPE=Ethernet<br>UUID=”b3cd1ac3-aecf-4845-9812-9337135c072b”<br>IPADDR=192.168.2.199    # IP地址<br>NETMASK=255.255.255.0  #子网掩码<br>DNS2=8.8.8.8     #域名服务器2<br>GATEWAY=192.168.2.1    #网关<br>DNS1=192.168.2.1     #域名服务器1<br>USERCTL=no</p>
+<p>7.2 主机名配置管理<br>在实际中，一个业务系统的服务器数量众多，服务器节点之间通信时使用主机名来标识比用ip地址更方便，但TCP/IP协议的寻址最终是通过IP来进行，因此，如果采用域名（主机名）来进行通信时需要一个“域名（主机名）——IP”的映射机制；<br>7.2.1 主机名管理<br>1、查看主机名<br>在shell提示符的@后有显示<br>或者用hostname指令打印出主机名</p>
+<p>2、修改主机名<br>vi  /etc/sysconfig/network  修改其中的hostname配置项:<br>HOSTNAME= hostnamenew</p>
+<p>修改完成之后要重启服务器才能生效<br>要想立即生效，可以执行指令  hostname hostnamenew ，然后注销重登陆</p>
+<p>7.2.2 主机名-IP映射<br>1、DNS<br>公网上有现成的DNS服务器，但是不能解析内网的私有域名（主机名），因而需要配置公司内部的私有DNS服务器，成本相对较高，实现起来比较麻烦</p>
+<p>2、服务器本地映射<br>服务器网络寻址时默认是现在本地的hosts文件中查找IP映射，通过修改hosts来映射局域网内部的主机名非常方便</p>
+<p>实现方法，将局域网内的每一台主机的“hostnamip”写入每一台主机的hosts文件中：<br>vi /etc/hosts<br>192.168.2.150  itcast-server-01<br>192.168.2.151    itcast-server-02<br>192.168.2.152    itcast-server-03</p>
+<p>7.3 网络服务启动与停止</p>
+<p>列出系统所有应用服务状态<br>service  –status-all<br>查看指定服务运行状态：<br>service servicename status<br>启动服务：<br>service servicename start<br>停止服务：<br>service servicename stop</p>
+<p>列出所有服务的随机自起配置：<br>chkconfig  –list<br>关闭服务的随机自起：<br>chkconfig servicename off<br>开启服务的随机自起：<br>chkconfig servicename on</p>
+<p>常用示例：<br>重启网络服务 service network restart<br>停止httpd    service httpd stop<br>启动 httpd    service httpd start<br>关闭防火墙服务  service iptables stop<br>关闭防火墙自动启动   chkconfig iptables off</p>
+<p>7.4 查看网络连接信息<br>指令：netstat<br>netstat常用示例：<br>netstat -natp<br>netstat -nltp<br>netstat -naup</p>
+<p>常用参数解释：<br>-a 显示所有连接和监听端口<br>-l  只显示监听进程<br>-t (tcp)仅显示tcp相关选项<br>-u (udp)仅显示udp相关选项<br>-n 拒绝显示别名，能显示数字的全部转化成数字。<br>-p 显示建立相关链接的程序名<br>8 常用系统管理指令<br>8.1 磁盘/内存使用信息查看<br>df -h  查看磁盘空间状态信息<br>du -sh * 查看指定目录下所有子目录和文件的汇总大小<br>free  查看内存使用状况</p>
+<p>8.2 进程管理<br>top   查看实时刷新的系统进程信息<br>ps -ef  查看系统中当前瞬间的进程信息快照<br>ps -ef | grep myshell.sh  搜索myshell进程的信息<br>kill -9 pid  杀掉进程  （-9 表示强制杀死）</p>
+<p>8.3 sudo权限的配置<br>root用户因为具有不受限制的权限，使用不慎可能对系统造成不可估量的损害，因而，生产实际中，轻易不要使用su去切换到root的身份<br>如果普通用户需要使用一些系统级管理命令，可以使用sudo来执行，比如 sudo vi /etc/profile</p>
+<p>给普通用户赋予sudo权限，配置方法如下：<br>例如，要给hadoop用户赋予sudo任何指令（或某条指定的命令）的权利，则编辑sudoers文件  vi /etc/sudoers<br>在其中加入需要赋予权限的用户（红色标识）<br>……</p>
+<p>root    ALL=(ALL)       ALL</p>
+<p>#让hadoop用户可以用root身份执行所有指令<br>hadoop  ALL=(ALL)       ALL</p>
+<p>#让itcast用户可以用root身份执行所有指令<br>Itcast     ALL=(root)       /usr/sbin/useradd, /usr/bin/passwd</p>
+<p>……</p>
+<p>检查是否生效:<br>[root@itcast-server-01 itcast]# sudo -lU itcast<br>User itcast is not allowed to run sudo on itcast-server-01.</p>
+<p>8.5 常用工具指令<br>8.5.1  vi 编辑器<br>linux系统中最通用的文本编辑器<br>vi hello.world 进入文件编辑<br>进去之后处于非编辑模式，此时，要按一个i进入insert模式</p>
+<p>在insert模式下，可以跟普通文本编辑器一样编辑内容<br>编辑完成之后，先按Esc退出insert模式，进入非编辑模式<br>然后再按 ：进入底行命令模式，在底行命令中敲入wq并回车，即可保存<br>如果想不保存退出，底行命令就用 q! </p>
+<p>（保存文件的另一种模式： 编辑完后按Esc退出insert模式，然后直接按快捷键保存—— shift + zz）</p>
+<p>8.5.2 修改系统的默认启动级别<br>vi /etc/inittab</p>
+<h1 id="0-halt-Do-NOT-set-initdefault-to-this"><a href="#0-halt-Do-NOT-set-initdefault-to-this" class="headerlink" title="0 - halt (Do NOT set initdefault to this)"></a>0 - halt (Do NOT set initdefault to this)</h1><h1 id="1-Single-user-mode"><a href="#1-Single-user-mode" class="headerlink" title="1 - Single user mode"></a>1 - Single user mode</h1><h1 id="2-Multiuser-without-NFS-The-same-as-3-if-you-do-not-have-networking"><a href="#2-Multiuser-without-NFS-The-same-as-3-if-you-do-not-have-networking" class="headerlink" title="2 - Multiuser, without NFS (The same as 3, if you do not have networking)"></a>2 - Multiuser, without NFS (The same as 3, if you do not have networking)</h1><h1 id="3-Full-multiuser-mode"><a href="#3-Full-multiuser-mode" class="headerlink" title="3 - Full multiuser mode"></a>3 - Full multiuser mode</h1><h1 id="4-unused"><a href="#4-unused" class="headerlink" title="4 - unused"></a>4 - unused</h1><h1 id="5-X11"><a href="#5-X11" class="headerlink" title="5 - X11"></a>5 - X11</h1><h1 id="6-reboot-Do-NOT-set-initdefault-to-this"><a href="#6-reboot-Do-NOT-set-initdefault-to-this" class="headerlink" title="6 - reboot (Do NOT set initdefault to this)"></a>6 - reboot (Do NOT set initdefault to this)</h1><p>#<br>id:3:initdefault:<br>~<br>用level 3 就启动全功能状态的字符界面 </p>
+<p>在命令行模式下，用startx可以手动启动图形界面(在服务器上操作)</p>
+<p>8.5.3 其他指令<br>1、grep<br>grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本内容，并把匹配的行打印出来</p>
+<p>示例：<br>grep ‘EOF’ ./<em><br>grep -c‘EOF’  ./</em>  显示匹配到的行数<br>grep -r ‘EOF’  ./<em>  指定对子目录也进行搜索<br>grep -l ‘EOF’ ./</em>   只显示命中的文件名<br>grep -n ‘EOF’ ./<em>  显示命中的行号<br>grep -lr ‘EOF’ ./</em><br>grep -ld skip ‘EOF’ ./*  显示指定不要搜索子文件夹</p>
+<p>参数含义：<br>-r 递归搜索子目录<br>-l 只列出有匹配行的文件名<br>-n 列出匹配行的行号<br>-d skip 不搜索子文件夹</p>
+<p>常用grep跟其他命令组合使用来查找我们关心的信息<br>示例：<br>service –status-all | grep ‘httpd’<br>netstat -nltp | grep ‘22’</p>
+<p>2、find<br>强大的查找工具，可根据文件名，文件所有者，创建时间，文件大小，文件类型，文件权限信息等各种条件来查找匹配的文件，功能非常强大，以下列出的是常用的几种示例：</p>
+<p>按照文件名称查找（可支持正则表达式）<br>find ./ -name ‘<em>.txt’<br>find ./ -name ‘install</em>’<br>按照文件类型查找<br>find ./ -type f<br>find ./ -type l</p>
+<p>3、wc<br>统计文本信息（行数，词数，字符数）<br>wc -c/w/l/</p>
+<p>4、其他<br>date  查看或者修改系统的日期和时间<br>最常用参数示例：<br>date<br>date “+%Y%m%d”<br>date -s “2020-12-20 10:56:00”</p>
+<p>echo  输出字符串或者变量的值<br>echo $str</p>
+<p>whoami    查询当前登陆者的身份<br>which    查询指定命令的$PATH路径</p>
+<p>9 linux中的软件安装<br>9.1 java软件安装<br>Jdk安装<br>将安装包解压到你的安装路径下<br>然后修改环境变量  sudo vi /etc/profile<br>然后  source /etc/profile  来生效<br>Tomcat<br>Eclipse安装</p>
+<p>9.2 RPM包安装<br>redhat 公司的RPM(Redhat Package Manager)(RPM Package Manager)方式的包管理 也是很常用的软件包管理器</p>
+<p>示例：Mysql安装<br>rpm -qa | grep mysql<br>sudo rpm -e mysql-libs-5.1.66-2.el6_3.i686 –nodeps<br>sudo rpm -ivh MySQL-server-5.1.73-1.glibc23.i386.rpm </p>
+<p>9.3 yum在线安装软件<br>yum 可以通过线上软件仓库自动解决依赖并安装指定的软件包(RPM)，示例如下：<br>yum install tomcat<br>yum –list tomcat*<br>yum install tomcat6<br>yum install tomcat6-webapps.i686</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/nginx笔记/index.html" data-id="cjohyj0z900010onr8meeafmh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/14/nginx笔记/">nginx笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/14/测试/">测试</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 小灬姜<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
