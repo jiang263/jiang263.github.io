@@ -33,6 +33,15 @@
 :active {
     cursor: url("/img/1.cur"),auto!important
 }
+ /* 主页文章添加阴影效果 */
+.post {
+   margin-top: 0px;
+   margin-bottom: 60px;
+   padding: 25px;
+   -webkit-box-shadow: 0 0 10px 5px #ccc;
+   -moz-box-shadow: 0 0 10px 5px #ccc;
+   box-shadow: 0 0 10px 5px #ccc;
+}
 html {
   color: #505050;
   line-height: 1.75em;
