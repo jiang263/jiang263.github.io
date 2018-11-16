@@ -42,6 +42,9 @@
    -moz-box-shadow: 0 0 10px 5px #ccc;
    box-shadow: 0 0 10px 5px #ccc;
 }
+#live2dcanvas{
+  left: 0;
+}
 html {
   color: #505050;
   line-height: 1.75em;
@@ -1340,7 +1343,7 @@ pre {
   }
   .timeline h2 {
     padding-left: 40%;
-    background-position: 48px 0;
+    background-position: 55px 0;
   }
   .timeline ul li {
     background-position: 70px 5px;
