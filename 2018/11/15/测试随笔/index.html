@@ -38,8 +38,6 @@
     
 
 
-    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-
 
 <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
 <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
@@ -251,20 +249,28 @@
 
 <div id="comments">
     
-	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-        id: window.location.pathname,
-        owner:"jiang263",
-        repo:"jiang263.github.io",
-        oauth: {
-          client_id:"618c7884ffad1a20b5dd",
-          client_secret:"232fbedb7b10d44aa72d409198d0132e2cb8cdfb"
-        },
-        perPage:"10",
-    });
-    gitment.render('comments');
-</script>
+    
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'B9dKH4FBq0m6AHTbm5j4fyQn-gzGzoHsz',
+            appKey: 'PjypYYqczvJfXKxA2CPFk5qX',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
 
 </div>
 
